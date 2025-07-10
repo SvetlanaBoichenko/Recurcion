@@ -20,7 +20,13 @@ public  int mySum (int n) {
 };
 
 //-----------------------------------------------
-    public static int CountPops (LinkedList listA) {
+   public static int LenghtOfList (LinkedList listA) {
+        LinkedList listB = new LinkedList<>(listA);
+
+        return CountPops (listB);
+    };
+   
+   public static int CountPops (LinkedList listA) {
     if (listA.isEmpty())
         return 0;
 
@@ -28,20 +34,13 @@ public  int mySum (int n) {
         return 1 + CountPops (listA);
     };
 
-    
-   public static int LenghtOfList (LinkedList listA) {
-        LinkedList listB = new LinkedList<>(listA);
-
-        return CountPops (listB);
-    };
 
 //------------------------------------------
-  public boolean LenghtOfStr (String str) {
-     String  strWork = new String (str);
+  public boolean IsPoliandr (String str) {
+    String  strWork = new String (str);
 
-      return CompSymbols (strWork);
-  }
-
+    return CompSymbols (strWork);
+}
 
   public static boolean CompSymbols (String str) {
           if (str.length() == 1 || str.isEmpty())
