@@ -18,6 +18,7 @@ public  int mySum (int n) {
 
     return (mySum (n/10) + n % 10);
 };
+
 //-----------------------------------------------
     public static int CountPops (LinkedList listA) {
     if (listA.isEmpty())
@@ -27,15 +28,14 @@ public  int mySum (int n) {
         return 1 + CountPops (listA);
     };
 
-    public static int LenghtOfList (LinkedList listA) {
+    
+   public static int LenghtOfList (LinkedList listA) {
         LinkedList listB = new LinkedList<>(listA);
 
         return CountPops (listB);
     };
-//------------------------------------------
 
 //------------------------------------------
-  //  проверка, является ли строка палиндромом;
   public boolean LenghtOfStr (String str) {
      String  strWork = new String (str);
 
@@ -54,35 +54,13 @@ public  int mySum (int n) {
 
           return CompSymbols (str);
   };
-  //-----------------------------------------------
-//linkedList.removeFirst();
- //   String str = "Jamaica".substring(1);
-   // str = str.substring(0, str.length() - 1);
-
-
-    public static void main (String[] args) {
-        System.out.printf("Hello and welcome!");
-        LinkedList A = new LinkedList <Integer>();
-        A.push(1);
-        A.push(3);
-        A.push(2);
-        A.push(4);
-
-     //   int ret = LenghtOfList (A);
-
-        String teststr = "vvggvv";
-
-    //   boolean ret1 = LenghtOfStr (teststr);
-    }
-
-}
+  
+//-----------------------------------------------
 
 
 
 
-    // 1. Найти остаток - каждый раз находть остаток
-    // Сложить с сум
-    // Когда остаток = 0 -выйти
+   
 
 
 
