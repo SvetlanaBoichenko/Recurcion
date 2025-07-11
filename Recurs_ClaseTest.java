@@ -49,13 +49,32 @@ public class Recurs_ClaseTest {
         assertTrue (ret == 7);
 
         String str = "mama";
-        boolean ret2 = RecClasObj.LenghtOfStr(str);
+        boolean ret2 = RecClasObj.IsPoliandr(str);
         assertTrue (ret2 == false);
 
         String str2 = "mamam";
-        ret2 = RecClasObj.LenghtOfStr(str2);
+        ret2 = RecClasObj.IsPoliandr(str2);
         assertTrue (ret2 == true);
 
+        String str3 = "a";
+        ret2 = RecClasObj.IsPoliandr(str3);
+        assertTrue (ret2 == true);
+
+        String str4 = "ananana";
+        ret2 = RecClasObj.IsPoliandr(str4);
+        assertTrue (ret2 == true);
+
+        String str5 = "иф";
+        ret2 = RecClasObj.IsPoliandr(str5);
+        assertTrue (ret2 == false);
+
+        String str6 = "anananan";
+        ret2 = RecClasObj.IsPoliandr(str6);
+        assertTrue (ret2 == false);
+
+        String str7 = "коту тащат уток";
+        ret2 = RecClasObj.IsPoliandr(str7);
+        assertTrue (ret2 == true);
 
     }
 }
