@@ -35,24 +35,25 @@ public  int mySum (int n) {
     };
 
 
-//------------------------------------------
-  public boolean IsPoliandr (String str) {
-    String  strWork = new String (str);
+//--------------------------------------------------
+ public boolean IsPoliandr (String str) {
+    
+    if (str.length() == 1 || str.isEmpty())
+        return true;
 
-    return CompSymbols (strWork);
+    return CompStringChars (str,0, str.length()-1);
 }
 
-  public static boolean CompSymbols (String str) {
-          if (str.length() == 1 || str.isEmpty())
-              return true;
+public boolean CompStringChars (String str, int first, int last) {
+   
+    if (str.charAt(first) != str.charAt(last))
+        return false;
 
-          char first = str.charAt(0);
-          char last = str.charAt(str.length()-1);
-          if (first != last) return false;
-          str = str.substring(1,str.length()-1);
+    if (++first >= --last)
+        return true;
 
-          return CompSymbols (str);
-  };
+        return CompStringChars ( str, first, last);
+    }
   
 //-----------------------------------------------
 
