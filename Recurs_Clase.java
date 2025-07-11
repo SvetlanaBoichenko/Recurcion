@@ -44,6 +44,7 @@ public  int mySum (int n) {
     return CompStringChars (str,0, str.length()-1);
 }
 
+   
 public boolean CompStringChars (String str, int first, int last) {
    
     if (str.charAt(first) != str.charAt(last))
