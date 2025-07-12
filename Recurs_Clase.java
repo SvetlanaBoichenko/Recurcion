@@ -54,7 +54,10 @@ public boolean CompStringChars (String str, int firstIndex) {
     if (str.charAt (firstIndex) != str.charAt (lastIndex))
         return false;
 
-    if (++firstIndex >= --lastIndex)
+   firstIndex++; 
+   lastIndex--;
+   
+   if (firstIndex >= lastIndex)
         return true;
 
         return CompStringChars (str, firstIndex);
