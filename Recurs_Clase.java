@@ -34,9 +34,9 @@ public  int mySum (int n) {
         return 1 + CountPops (listA);
     };
 
-
 //--------------------------------------------------
-public boolean IsPoliandr (String str) {
+
+   public boolean IsPoliandr (String str) {
     if (str.length() == 1 || str.isEmpty())
         return true;
 
