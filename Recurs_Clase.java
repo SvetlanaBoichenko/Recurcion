@@ -36,24 +36,27 @@ public  int mySum (int n) {
 
 
 //--------------------------------------------------
- public boolean IsPoliandr (String str) {
-    
+public boolean IsPoliandr (String str) {
     if (str.length() == 1 || str.isEmpty())
         return true;
 
-    return CompStringChars (str,0, str.length()-1);
+    return CompStringChars (str,0);
 }
 
    
-public boolean CompStringChars (String str, int first, int last) {
-   
-    if (str.charAt(first) != str.charAt(last))
+public boolean CompStringChars (String str, int firstIndex) {
+    if (firstIndex < 0 || firstIndex > str.length() - 1)
         return false;
 
-    if (++first >= --last)
+    int lastIndex = str.length() - firstIndex -1;
+
+    if (str.charAt (firstIndex) != str.charAt (lastIndex))
+        return false;
+
+    if (++firstIndex >= --lastIndex)
         return true;
 
-        return CompStringChars ( str, first, last);
+        return CompStringChars (str, firstIndex);
     }
   
 //-----------------------------------------------
