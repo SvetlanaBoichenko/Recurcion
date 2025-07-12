@@ -76,6 +76,13 @@ public class Recurs_ClaseTest {
         ret2 = RecClasObj.IsPoliandr(str7);
         assertTrue (ret2 == true);
 
+        String str8 = "abba";
+        ret2 = RecClasObj.IsPoliandr(str8);
+        assertTrue (ret2 == true);
+
+        String str9 = "bb";
+        ret2 = RecClasObj.IsPoliandr(str9);
+        assertTrue (ret2 == true);
     }
 }
 
