@@ -45,7 +45,8 @@ public boolean IsPoliandr (String str) {
 
    
 public boolean CompStringChars (String str, int firstIndex) {
-    if (firstIndex < 0 || firstIndex > str.length() - 1)
+   
+   if (firstIndex < 0 || firstIndex > str.length() - 1)
         return false;
 
     int lastIndex = str.length() - firstIndex -1;
