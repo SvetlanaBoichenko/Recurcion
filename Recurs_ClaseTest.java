@@ -83,6 +83,24 @@ public class Recurs_ClaseTest {
         String str9 = "bb";
         ret2 = RecClasObj.IsPoliandr(str9);
         assertTrue (ret2 == true);
+
+        LinkedList L = new LinkedList <Integer>();
+        L.push(10);
+        L.push(3);
+        L.push(2);
+        L.push(4);
+        L.push(4);
+        L.push(5);
+        L.push(6);
+        L.push(70);
+        L.push(8);
+
+        RecClasObj.PrintChetValues (L);
+        RecClasObj.PrintChetValues (A);
+
+        RecClasObj.ChetIndexValue(L);
+        RecClasObj.ChetIndexValue(A);
+
     }
 }
 
