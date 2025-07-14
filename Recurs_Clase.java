@@ -68,13 +68,11 @@ public boolean CompStringChars (String str, int firstIndex) {
    void PrintChetValues (LinkedList <Integer> valueList) {
         List <Integer> printValueList = new LinkedList <Integer>(valueList);
 
-        PrintChetValues (printValueList, 0);
-   }
+        CheckChetValues (printValueList, 0);
+        }
 
-    
-   void PrintChetValues (List <Integer> valueList, int index) {
-       
-      if (index >= valueList.size() || index <0)
+    void CheckChetValues (List <Integer> valueList, int index) {
+        if (index >= valueList.size() || index <0)
             return ;
 
         int val = valueList.get(index);
@@ -84,21 +82,17 @@ public boolean CompStringChars (String str, int firstIndex) {
             System.out.println(val);
             index++;
         }
-        PrintChetValues (valueList, index);
-    }
+        CheckChetValues (valueList, index);
+    };
+//------------------------------------------------------
 
-
-//---------------------------------------------------
- 
-   void ChetIndexValue (List <Integer> valueList) {
+    void PrintChetIndex  (List <Integer> valueList) {
         List <Integer> printList = new LinkedList <Integer>(valueList);
 
-        PrintChetIndex (printList);
+        ChetIndexValue (printList);
     }
 
-   
-   
-   void PrintChetIndex (List <Integer> valueList) {
+    void ChetIndexValue (List <Integer> valueList) {
         if (valueList.size() == 0)
             return;
         System.out.println(valueList.get(0)); ;
@@ -109,8 +103,9 @@ public boolean CompStringChars (String str, int firstIndex) {
 
         valueList.remove(0);
 
-        PrintChetIndex (valueList);
-    }
+        ChetIndexValue (valueList);
+    };
+
 //------------------------------------------------------------------------------
 
 
