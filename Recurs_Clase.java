@@ -65,7 +65,27 @@ public boolean CompStringChars (String str, int firstIndex) {
   
 //-----------------------------------------------
 
+   void PrintChetValues (LinkedList <Integer> valueList) {
+        List <Integer> printValueList = new LinkedList <Integer>(valueList);
 
+        PrintChetValues (printValueList, 0);
+   }
+
+    
+   void PrintChetValues (List <Integer> valueList, int index) {
+       
+      if (index >= valueList.size() || index <0)
+            return ;
+
+        int val = valueList.get(index);
+        if (val % 2 != 0)
+            valueList.remove(index);
+        else {
+            System.out.println(val);
+            index++;
+        }
+        PrintChetValues (valueList, index);
+    }
 
 
    
