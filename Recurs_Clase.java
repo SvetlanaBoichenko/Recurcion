@@ -88,8 +88,30 @@ public boolean CompStringChars (String str, int firstIndex) {
     }
 
 
-   
+//---------------------------------------------------
+ 
+   void ChetIndexValue (List <Integer> valueList) {
+        List <Integer> printList = new LinkedList <Integer>(valueList);
 
+        PrintChetIndex (printList);
+    }
+
+   
+   
+   void PrintChetIndex (List <Integer> valueList) {
+        if (valueList.size() == 0)
+            return;
+        System.out.println(valueList.get(0)); ;
+        valueList.remove(0);
+
+        if (valueList.size() == 0)
+            return;
+
+        valueList.remove(0);
+
+        PrintChetIndex (valueList);
+    }
+//------------------------------------------------------------------------------
 
 
 
