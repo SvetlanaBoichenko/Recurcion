@@ -76,12 +76,11 @@ public boolean CompStringChars (String str, int firstIndex) {
             return ;
 
         int val = valueList.get(index);
-        if (val % 2 != 0)
-            valueList.remove(index);
-        else {
+        if (val % 2 == 0){
             System.out.println(val);
-            index++;
         }
+        index++;
+
         CheckChetValues (valueList, index);
     };
 //------------------------------------------------------
