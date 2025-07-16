@@ -20,6 +20,7 @@ public  int mySum (int n) {
 };
 
 //-----------------------------------------------
+
    public static int LenghtOfList (LinkedList listA) {
         LinkedList listB = new LinkedList<>(listA);
 
@@ -64,7 +65,8 @@ public boolean CompStringChars (String str, int firstIndex) {
     }
   
  //----------------------------------------------------
-     void PrintChetValues (List <Integer> valueList) {
+ 
+   void PrintChetValues (List <Integer> valueList) {
         CheckChetValues (valueList, 0);
         }
 
@@ -73,31 +75,28 @@ public boolean CompStringChars (String str, int firstIndex) {
             return;
 
         int val = valueList.get(index);
+       
         if (val % 2 == 0) {
             System.out.println(val);
         }
         
         CheckChetValues (valueList,  index + 1);
     }
-    //------------------------------------------------------
-    void PrintChetIndex  (List <Integer> valueList) {
+ //---------------------------------------------------------------
+ 
+   void PrintChetIndex  (List <Integer> valueList) {
         ChetIndexValue (valueList, 0);
     }
 
     void ChetIndexValue (List <Integer> valueList, int index) {
         if (index >= valueList.size() || index < 0)
             return;
-
-        if (index % 2 == 0) {
-            System.out.println(valueList.get(index));
-            index += 2;
-        }
-        else
-            index ++;
-
-        ChetIndexValue (valueList, index);
+       
+         System.out.println(valueList.get(index));
+       
+         ChetIndexValue (valueList, index + 2);
     };
-//------------------------------------------------------------------------------
+//-----------------------------------------------------------------
 
 
 
