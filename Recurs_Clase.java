@@ -76,8 +76,8 @@ public boolean CompStringChars (String str, int firstIndex) {
         if (val % 2 == 0) {
             System.out.println(val);
         }
-        index++;
-        CheckChetValues (valueList,  index);
+        
+        CheckChetValues (valueList,  index + 1);
     }
     //------------------------------------------------------
     void PrintChetIndex  (List <Integer> valueList) {
