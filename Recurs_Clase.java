@@ -97,7 +97,48 @@ public boolean CompStringChars (String str, int firstIndex) {
          ChetIndexValue (valueList, index + 2);
     };
 //-----------------------------------------------------------------
+  
+  int SecondMax ( int inputArray []) {
+       if (inputArray.length < 2)
+           return 0xFFFF;
 
+       int [] smalArray = new int[2];
+       if (inputArray[1] > inputArray[0]) {
+           smalArray[0] = inputArray[1];
+           smalArray[1] = inputArray[0];
+       }
+       else {
+           smalArray[0] = inputArray[0];
+           smalArray[1] = inputArray[1];
+       }
+
+       if (inputArray.length == 2)
+           return smalArray[1];
+
+        return LookSecondMax (inputArray, smalArray, 2);   
+    }
+
+    
+   int LookSecondMax (int[] inpArr, int[] smalArr, int nextIndex) {
+       
+       if (nextIndex >= inpArr.length)
+           return smalArr[1];
+
+        int nextNumber = inpArr[nextIndex];
+
+        if (nextNumber >= smalArr[1]) {
+            smalArr[1] = nextNumber;
+        }
+
+        if (nextNumber >= smalArr[0]) {
+            int temp = smalArr[0];
+            smalArr[0] = nextNumber;
+            smalArr[1] = temp;
+        }
+
+        return LookSecondMax (inpArr, smalArr, nextIndex +1);
+    }
+   //----------------------------------------------------------------
 
 
 
