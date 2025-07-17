@@ -95,12 +95,61 @@ public class Recurs_ClaseTest {
         L.push(70);
         L.push(8);
 
-        RecClasObj.PrintChetValues (L);
-        RecClasObj.PrintChetValues (A);
+        //RecClasObj.PrintChetValues (L);
+        //RecClasObj.PrintChetValues (A);
 
-        RecClasObj.ChetIndexValue(L);
-        RecClasObj.ChetIndexValue(A);
+         RecClasObj.PrintChetIndex (L);
+         RecClasObj.PrintChetIndex(A);
 
+
+        int Arr [] =  {15,6,4,3,2,1};
+        int sec_max = RecClasObj.SecondMax (Arr);
+        assertTrue (sec_max == 6);
+
+
+        int Arr1 [] =  {15,60,4,3,2,1};
+         sec_max = RecClasObj.SecondMax (Arr1);
+        assertTrue (sec_max == 15);
+
+        int Arr2 [] =  {150,60,4,3,2,1};
+        sec_max = RecClasObj.SecondMax (Arr2);
+        assertTrue (sec_max == 60);
+
+        int Arr3 [] =  {1,1,1,1,1,11};
+        sec_max = RecClasObj.SecondMax (Arr3);
+        assertTrue (sec_max == 1);
+
+        int Arr4 [] =  {111,1,1,1,1,11};
+        sec_max = RecClasObj.SecondMax (Arr4);
+        assertTrue (sec_max == 11);
+
+        int Arr5 [] =  {111,1,1,1,1,11, 12, 12, 12};
+        sec_max = RecClasObj.SecondMax (Arr5);
+        assertTrue (sec_max == 12);
+
+        int Arr6 [] =  {13,14,1,1,1,11, 12, 12, 12};
+        sec_max = RecClasObj.SecondMax (Arr6);
+        assertTrue (sec_max == 13);
+
+        int Arr7 [] =  {13,14,1,1,1,11, 12, 12, 15};
+        sec_max = RecClasObj.SecondMax (Arr7);
+        assertTrue (sec_max == 14);
+
+        int Arr8 [] =  {130,14,1,1,1,11, 12, 12, 15};
+        sec_max = RecClasObj.SecondMax (Arr8);
+        assertTrue (sec_max == 15);
+
+        int Arr9 [] =  {1,5};
+        sec_max = RecClasObj.SecondMax (Arr9);
+        assertTrue (sec_max == 1);
+
+        int Arr10 [] =  {5,1};
+        sec_max = RecClasObj.SecondMax (Arr10);
+        assertTrue (sec_max == 1);
+
+        int Arr11 [] = {5,4,3,2,5};
+        sec_max = RecClasObj.SecondMax (Arr11);
+        assertTrue (sec_max == 5);
     }
 }
 
