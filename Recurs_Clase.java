@@ -97,10 +97,12 @@ public boolean CompStringChars (String str, int firstIndex) {
          ChetIndexValue (valueList, index + 2);
     };
 //-----------------------------------------------------------------
-  
-  int SecondMax ( int inputArray []) {
-       if (inputArray.length < 2)
-           return 0xFFFF;
+
+int SecondMax ( int inputArray [])   {
+
+        if (inputArray.length < 2) {
+            throw new ArrayIndexOutOfBoundsException ("\n Длина массива должна быть больше 2! \n");
+        }
 
        int [] smalArray = new int[2];
        if (inputArray[1] > inputArray[0]) {
@@ -138,6 +140,7 @@ public boolean CompStringChars (String str, int firstIndex) {
 
         return LookSecondMax (inpArr, smalArr, nextIndex +1);
     }
+   
    //----------------------------------------------------------------
 
 
