@@ -143,20 +143,22 @@ int SecondMax ( int inputArray [])   {
    
    //----------------------------------------------------------------
 
- public static  ArrayList <String> ListFileNames (String inputDir) {
-        ArrayList <String> fielNamesList =  new ArrayList<>();
-      
-        File[] faFiles = new File(inputDir).listFiles();
-        for (File file : faFiles) {
+    public static  ArrayList <String> ListFileNames (String inputDir) {
+       
+       ArrayList <String> fielNamesList =  new ArrayList<>();
+
+       File[] curFiles = new File(inputDir).listFiles();
+        
+       for (File file : curFiles) {
             if (file.isDirectory()) {
-                ListFileNames (file.getAbsolutePath());
+                fielNamesList.addAll (ListFileNames (file.getAbsolutePath()));
             }
 
             if (!file.isDirectory() ) {
                 fielNamesList.add(file.getAbsolutePath());
             }
-        }
-    
+        } 
+       
         return fielNamesList;
     }
 
